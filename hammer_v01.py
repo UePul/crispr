@@ -84,20 +84,17 @@ reverse_oligo = three_overhang+reverse_complement_total
 
 # excel sheet
 
-
-# Some data we want to write to the worksheet.
 oligo_seq = (
     [spacer_name+'_fw', forward_oligo],
     [spacer_name+'_rev', reverse_oligo],
 
 )
 
-# Start from the first cell. Rows and columns are zero indexed.
 
 row = 4
 col = 0
 
-# Iterate over the data and write it out row by row.
+# Iterate
 for oligo_name, oligo_sequence in (oligo_seq):
     worksheet.write(row, col,     oligo_name)
     worksheet.write(row, col + 1, oligo_sequence)
